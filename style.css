@@ -23,7 +23,7 @@ body {
     background-color: var(--backgroundcolor);
     font-size:var(--mobilefontsize);
     box-sizing: border-box;
-    line-height: 2;
+    line-height: 1.5;
     font-weight: bold;
 }
 /* GENERAL STYLE END */
@@ -150,7 +150,7 @@ img {
 div.imagecontainer {
     position: relative;
 }
-div.imageitem {
+div.imageitem, .sectionimage {
     position: inherit;
     max-width: 100%;
     height: auto;
@@ -235,12 +235,8 @@ section.social {
 /* third section image flex style start*/
 section.imageflex{
     position: relative;
-    padding: 3px;
-    margin-bottom: 2rem;
-}
-/* img.fleximage {
-    transition: transform 2s ease-in;
-} */
+  }
+
 /* third section style end*/
 /* MAIN STYLE START END */
 
@@ -310,5 +306,125 @@ a.link:visited {
 /* MEDIA QUERIES FOR TABLETS AND DESKTOPS */
 
 @media screen and (min-width:600px) and (max-width:1023px) {
+body {
+    font-size: 1.3rem;
+}
+#header h1 {
+    font-size: 1.5rem;
+}
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+div #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+}
+@media screen and (min-width:1024px)  {
+body {
+    font-size: 1.25rem;
+}
+ 
+#header h1 {
+    font-size: 1.1rem;
+}
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer h3{
+    margin: 0;
+    padding: 0;
+}
+div.headerp p {
+    font-size: 1.1rem;
+}
+div.imageitem {
+     max-width: 100%;
+     flex: 1 1 auto;
+  }
+.imagecontainer  {
+    display: flex;
+flex-flow: row nowrap;}
 
+
+div.mybutton { display: block;
+    flex-flow: unset;
+align-self:safe;
+justify-self:normal;
+ 
+}
+#header {
+    position: static;
+    top: 0;
+    z-index: 100000;
+    width: 100vw;
+}
+section.content { gap: unset;
+    display: flex;
+    flex-direction: row;
+     align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+     width: 80%;
+    justify-content: center;
+}
+div.contenttext {
+   width: 50%;
+   padding: 0;
+    margin: 0;
+   height: auto;
+   background-color:#C4DAD2;
+   height: 499px; text-align: center;
+}
+div.sectionimage {
+    height: fit-content;
+    position: relative;
+    padding: 0;
+    margin: 0;
+ }
+ p.contentp {
+    padding: 35px;
+    text-align: left;
+ }
+ #image {
+    position: relative;
+    top: 0;
+    height: 500px;
+    border-radius: unset;
+    width: 100%;
+ }
+ #navbar {
+    margin-top: 50rem;
+    display: flex  ;
+    flex-direction: row
+ }
+ div.overlaycontent{
+    display: flex ;
+ }
+ button.nav-overlay{
+    display: unset;
+ }
+ .overlay .closebutton {
+    display: unset;
+}
 }
